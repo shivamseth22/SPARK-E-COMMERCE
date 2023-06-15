@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -19,6 +18,10 @@ import { Provider } from "react-redux";
 import store from "./utils/store";
 import Cart from "./components/Cart";
 import Shop from "./components/Shop";
+import Furniture from "./components/Furniture";
+import Decoration from "./components/Decoration";
+import Sunglasses from "./components/Sunglasses";
+import Shoes from "./components/Shoes";
 function App() {
   return (
     <div className="app w-full">
@@ -46,6 +49,10 @@ export const appRouter = createBrowserRouter([
         element: <Shop />,
       },
       {
+        path: "/mens-shoes",
+        element: <Shoes />,
+      },
+      {
         path: "/Grocery",
         element: <Grocery />,
       },
@@ -70,8 +77,12 @@ export const appRouter = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/Mobile",
+        path: "/smartphones",
         element: <Mobile />,
+      },
+      {
+        path: "/sunglasses",
+        element: <Sunglasses />,
       },
       {
         path: "/Beauty",
@@ -82,12 +93,20 @@ export const appRouter = createBrowserRouter([
         element: <Faishon />,
       },
       {
+        path: "/home-decoration",
+        element: <Decoration />,
+      },
+      {
         path: "/Login",
         element: <Login />,
       },
       {
         path: "/Cart",
         element: <Cart />,
+      },
+      {
+        path: "/Furniture",
+        element: <Furniture />,
       },
       // {
       //   path: "/Logout",

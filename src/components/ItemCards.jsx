@@ -6,22 +6,25 @@ const ItemCards = ({ category }) => {
 
   const pinkyData = useCatproduct({category});
 
-
+console.log(pinkyData)
   // console.log(pinkyData);
   return (
     <>
+     
       {pinkyData &&
         pinkyData?.map((slip) => (
          <Link to={`/product/${slip.id}`}  key={slip.id}className="h-max  p-5 flex-wrap w-1/4"> 
-         <div >
+         <div className="" >
             <img src={slip.thumbnail} className="h-40 " />
             <h2>{slip.title}</h2>
             {/* <h3>{slip.description}</h3>
             <h3>{slip.rating}</h3> */}
-            <h3>Price {slip.price}$</h3>
+            <h3>Price &#8377;{slip.price * 40}</h3>
           </div>
           </Link>
+        
         ))}
+        
     </>
   );
 };
