@@ -14,6 +14,7 @@ const ProductsDetails = () => {
   const { pid } = useParams();
 
   const [thing, setThing] = useState({});
+
   // console.log(thing);
   const dispatch = useDispatch();
   const handleAddItem = (item) => {
@@ -78,7 +79,7 @@ const ProductsDetails = () => {
             name="read-only"
             value={thing.rating}
             precision={0.5}
-            readOnly
+            // readOnly
           />
         </h1>
         <div className="flex flex-col justify-between gap-2">

@@ -6,7 +6,7 @@ const Shop = () => {
   const samanData = useShop();
   console.log(samanData);
   return (
-    <div className="flex flex-wrap justify-evenly m-auto gap-6 ">
+    <div className="flex flex-wrap justify-evenly gap-6 mt-5 ">
       {samanData &&
         samanData?.map((item) => (
             <Link to="">

@@ -4,7 +4,9 @@ import React from "react";
 const Faishon =()=>{
     return(
         <div className="flex flex-wrap">
-      <ItemCards category="sunglasses" />
+      <ItemCards category="tops" key={101} />
+      <ItemCards category="womens-dresses" key={102}/>
+      <ItemCards category="womens-shoes"key={103} />
     </div>
     )
 }

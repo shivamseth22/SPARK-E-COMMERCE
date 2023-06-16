@@ -1,7 +1,7 @@
 import React from "react";
 const Footer = () => {
   return (
-    <div className="flex justify-evenly m-4 p-4 ">
+    <div className="flex justify-evenly  p-4 shadow-2xl bg-slate-800 text-white ">
       <div >
         <h3 className="pb-1 text-xl font-bold">About</h3>
         <ul>
@@ -44,7 +44,7 @@ const Footer = () => {
           
         </ul>
       </div>
-      <div className="flex flex-wrap w-36 justify-start">
+      <div className="flex flex-col flex-wrap w-36">
         <h1  className="pb-1 text-xl font-bold">
             Mail us
         </h1>

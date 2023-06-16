@@ -1,16 +1,19 @@
 import { useState, useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import {BiSearch} from "react-icons/Bi"
 import { Link, useNavigate } from "react-router-dom";
 // import ShopIcon from '@mui/icons-material/Shop';
 import { useSelector } from "react-redux";
 import { MdShop } from "react-icons/md";
 import Badge from "@mui/material/Badge";
+import SearchIcon from '@mui/icons-material/Search';
 
 import React from "react";
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState("Login");
+  
 
   const navigate = useNavigate();
 
@@ -18,17 +21,17 @@ const Header = () => {
   // console.log(cartItems);
 
   return (
-    <div className="flex text-center justify-around  bg-blue-500 text-white sticky top-0 md:sm:bg-green-500 z-10">
-      <h2 className="m-3 p-3 text-xl font-bold flex gap-7">
+    <div className="flex text-center justify-around h-20 items-center  bg-blue-500 text-white sticky top-0 shadow-xl z-10 lg:bg-slate-800  md:bg-slate-600 sm:bg-red-400 none ">
+      <h2 className="items-center font-bold flex gap-7 text-2xl">
         <Link to="/">SPARK</Link>
         <Link to="/Shop">
-          <MdShop className="text-4xl" />
+          <MdShop className="" />
         </Link>
       </h2>
 
-      <div className="mt-2">
+      <div className="flex items-center md:bg-slate-600">
         <input
-          className="h-10 p-3 m-3 w-80 text-black border-none ml-0"
+          className="h-10 p-3  text-black border-none  lg:w-80 "
           type="text"
           placeholder="Search for product,brands and more"
           value={searchText}
@@ -37,17 +40,13 @@ const Header = () => {
           }}
         ></input>
 
-        <button
-          type="submit"
-          className="searchButton"
-          onClick={() => navigate(`/search/${searchText}`)}
-        >
-          Search
-        </button>
+        <span className="inline-flex  justify-center">
+        <BiSearch onClick={() => navigate(`/search/${searchText}`)} className=" bg-white text-slate-800 h-10 w-10 p-2 cursor-pointer"/>
+        </span>
       </div>
-      <ul className="flex m-6 text-center font-bold">
+      <ul className="flex text-center justify-between font-bold gap-5 text-lg">
         <li
-          className="px-6 py-2 bg-white text-blue-800 h-10 w-24 cursor-pointer font-bold"
+          className="flex items-center justify-center bg-white text-slate-800 h-10 w-24 cursor-pointer font-bold"
           onClick={() => {
             if (isLoggedIn === "Login") {
               setIsLoggedIn("Logout");
@@ -61,13 +60,11 @@ const Header = () => {
           {isLoggedIn}
         </li>
 
-        <li className="px-6 py-2">Become a Seller</li>
-        <li className="px-6 py-2">More</li>
-
-        {/* <span className="bg-white text-blue-600 h-4 w-4 rounded-full -mx-2 p-0"></span> */}
-        <Link to="/Cart" className=" pl-2 py-2 ">
-          <Badge badgeContent={cartItems.length} color="primary">
-            <FaShoppingCart className="text-2xl " />
+        <li className="flex items-center ">Become a Seller</li>
+        <li className="flex items-center ">More</li>
+        <Link to="/Cart" className=" flex items-center">
+          <Badge badgeContent={cartItems.length} color="secondary">
+            <FaShoppingCart className="" />
           </Badge>
         </Link>
       </ul>

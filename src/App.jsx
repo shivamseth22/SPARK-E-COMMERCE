@@ -44,6 +44,7 @@ export const appRouter = createBrowserRouter([
         path: "/",
         element: <Body />,
       },
+  
       {
         path: "/Shop",
         element: <Shop />,

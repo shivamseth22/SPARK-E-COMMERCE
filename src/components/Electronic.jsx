@@ -1,10 +1,10 @@
 import React from "react";
+import ItemCards from "./ItemCards";
 const Electronics =()=>{
     return (
         <>
-            <h1>
-                I am Electronics
-            </h1>
+           <ItemCards category="laptops" key={301}/>
+           <ItemCards category="smartphones" key={302}/>
         </>
     )
 }

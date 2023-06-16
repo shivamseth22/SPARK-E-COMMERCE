@@ -10,12 +10,11 @@ const BuyItem = ({
 }) => {
   return (
     <>
-      <div className="">
-        <div className="flex m-5  p-10 w-3/4 ">
-          <div className="">
+        <div className="flex p-5">
+          <div className="w-80 ">
             <img
               src={thumbnail}
-              className="h-56 p-3 shadow-2xl flex justify-items-center hover:scale-105 ease duration-[0.2s]"
+              className="shadow-2xl flex justify-items-center "
             />
           </div>
           <div className="mx-10 flex  flex-col gap-3">
@@ -30,8 +29,8 @@ const BuyItem = ({
                 readOnly
               />
             </h1>
-            
-            <h1 className="text-5xl font-bold ">
+
+            <h1 className="text-3xl font-bold ">
               <span className="i-discount">&#8377;{price * 40}</span>{" "}
               <span className="line-through text-2xl text-gray-500">
                 {price * 70}
@@ -41,9 +40,6 @@ const BuyItem = ({
               </span>{" "}
             </h1>
           </div>
-        </div>
-
-        
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import React from "react";
 const Login = () => {
   return (
     <div className="">
-    <form className="flex flex-col bg-green-500 h-96 w-96 justify-center my-16 m-auto shadow-2xl"  >
+    <form className="flex flex-col bg-slate-500 h-96 w-96 justify-center my-16 m-auto  shadow-2xl"  >
       <input
         className="m-3 p-3"
         id="email"
