@@ -29,7 +29,9 @@ const ProductsDetails = () => {
     const data = await fetch(`https://dummyjson.com/products/${pid}`);
     const json = await data.json();
     setThing(json);
+    
   }
+
 
   return !thing ? (
     <Shimmer />

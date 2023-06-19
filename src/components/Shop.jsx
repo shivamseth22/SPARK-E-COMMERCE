@@ -6,9 +6,11 @@ import Shimmer from "./Shimmer";
 
 const Shop = () => {
   const samanData = useShop();
-  console.log(samanData);
+
   return (!samanData) ?
-  <Shimmer/>
+  <div className="mb-20">
+    <Shimmer />
+  </div>
   :
   (
     <div className="flex flex-wrap justify-evenly gap-6 mt-5 ">

@@ -1,47 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useCatproduct from "../utils/useCatproduct";
 import { Link } from "react-router-dom";
-import { Rating } from "@mui/material";
+
+import PinkyData from "./PinkyData";
 
 const ItemCards = ({ category }) => {
-  const pinkyData = useCatproduct({ category });
   return (
     <>
-      <div className="flex h-72 justify-between p-5 ">
-        {pinkyData &&
-          pinkyData?.map((slip) => (
-            <Link
-              to={`/product/${slip.id}`}
-              key={slip.id}
-              className="place-items-center w-1/6">
-            
-              <div className="flex h-1/2 justify-center ">
-                <img src={slip.thumbnail} className="h-full" />
-              </div>
-              <div className="h-1/2">
-                <h2 className="font-bold">{slip.title}</h2>
-                <h2 className=" line-clamp-1">{slip.description}</h2>
-                <h1 className="">
-                  <Rating
-                    name="read-only"
-                    value={slip.rating}
-                    precision={0.5}
-                    readOnly
-                  />
-                </h1>
-                <h1 className="text font-bold  ">
-                  <span>&#8377;{slip.price * 40}</span>{" "}
-                  <span className="line-through  text-gray-500">
-                    &#8377;
-                    {slip.price * 70}
-                  </span>{" "}
-                  <span className=" text-green-600">
-                    {slip.discountPercentage} % Off
-                  </span>{" "}
-                </h1>
-              </div>
-            </Link>
-          ))}
+      <div className="flex w-full justify-around items-center ">
+        <div className="flex flex-col  w-[16%] justify-center  shadow-md  ">
+          <div className="w-full flex flex-col items-center">
+          <h1 className="text-3xl pt-5">Best Of</h1>
+          <h1 className="text-3xl pb-6 capitalize text-center">{category}</h1>
+          <Link to={`/category/${category}`} className="">
+            <button className=" w-32 h-10  bg-slate-800  text-white font-bold">
+              Veiw All
+            </button>
+          </Link>
+
+          <img
+            className="h-1/2"
+            src="https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90"
+          />
+          </div>
+        </div>
+       <div className="w-[80%]">
+        <PinkyData cat={category}  />
+       </div>
+        
       </div>
     </>
   );
