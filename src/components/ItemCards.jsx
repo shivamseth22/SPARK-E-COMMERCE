@@ -29,7 +29,7 @@ const ItemCards = ({ category }) => {
                     readOnly
                   />
                 </h1>
-                <h1 className="text font-bold ">
+                <h1 className="text font-bold  ">
                   <span>&#8377;{slip.price * 40}</span>{" "}
                   <span className="line-through  text-gray-500">
                     &#8377;
