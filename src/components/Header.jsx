@@ -1,17 +1,16 @@
-import { useState, useContext } from "react";
+import { useState} from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import {BiSearch} from "react-icons/Bi"
+import {BiSearch} from "react-icons/Bi";
 import { Link, useNavigate } from "react-router-dom";
-// import ShopIcon from '@mui/icons-material/Shop';
 import { useSelector } from "react-redux";
 import { MdShop } from "react-icons/md";
 import Badge from "@mui/material/Badge";
-import SearchIcon from '@mui/icons-material/Search';
+
 
 import React from "react";
 
 const Header = () => {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState(" ");
   const [isLoggedIn, setIsLoggedIn] = useState("Login");
   
 
