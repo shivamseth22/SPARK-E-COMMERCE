@@ -2,15 +2,20 @@ import useShop from "../utils/useShop";
 import React from "react";
 import { Rating } from "@mui/material";
 import {Link} from "react-router-dom";
+import Shimmer from "./Shimmer";
+
 const Shop = () => {
   const samanData = useShop();
   console.log(samanData);
-  return (
+  return (!samanData) ?
+  <Shimmer/>
+  :
+  (
     <div className="flex flex-wrap justify-evenly gap-6 mt-5 ">
       {samanData &&
         samanData?.map((item) => (
             <Link to="">
-          <div className="h-72 w-72 overflow-hidden  gap-4 shadow-2xl hover:scale-105 ease-in duration-300">
+          <div key={item.id} className="h-72 w-72 overflow-hidden  gap-4 shadow-2xl hover:scale-105 ease-in duration-300">
             <div className="h-1/2 flex justify-center ">
               <img className="h-full " src={item.thumbnail} />
             </div>

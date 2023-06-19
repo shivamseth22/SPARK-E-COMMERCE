@@ -2,17 +2,18 @@ import ItemCards from "./ItemCards";
 import React from "react";
 import { Link } from "react-router-dom";
 
+const list = ["home-decoration" , "smartphones" , "sunglasses" , "furniture" , "mens-shoes" ]
 const Content = () => {
   // const {pid}= useParams();
 
   return (
-    <div className="flex flex-col m-5 place-items-center">
-      <div className="flex  place-items-center shadow-2xl gap-5 ">
-        <div className=" ">
+    <div className="flex flex-col m-5 items-center ">
+      <div className="flex items-center shadow-2xl gap-5  ">
+        <div className=" flex flex-col items-center">
           <h1 className="text-4xl flex-wrap text-center pt-10 ">Best Of</h1>
           <h1 className="text-4xl flex-wrap text-center pb-9">Decoration</h1>
           <Link to="/home-decoration" className="">
-            <button className="h-10 w-40  bg-slate-800 ml-14 text-white font-bold">
+            <button className="h-10 w-40  bg-slate-800  text-white font-bold">
               Veiw All
             </button>
           </Link>
@@ -22,11 +23,11 @@ const Content = () => {
           />
         </div>
         <div className="w-4/5">
-          <ItemCards category="home-decoration" key={1} />
+          {list.map((item , index)=> <ItemCards category={item} key={index}/>)}
         </div>
       </div>
 
-      <div className="flex  place-items-center shadow-2xl gap-5 ">
+      {/* <div className="flex  place-items-center shadow-2xl gap-5 ">
         <div>
           <h1 className="text-4xl flex-wrap text-center pt-10 ">Best Of</h1>
           <h1 className="text-4xl flex-wrap text-center pb-9">Mobiles</h1>
@@ -91,7 +92,7 @@ const Content = () => {
           {" "}
           <ItemCards category="mens-shoes" key={5} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

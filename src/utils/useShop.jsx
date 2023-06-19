@@ -1,27 +1,20 @@
 import { useEffect, useState } from "react";
 
-const useShop = ()=>{
+const useShop = () => {
+  const [saman, setSaman] = useState(null);
 
-    const [saman , setSaman] =useState(null);
-    // console.log(saman);
-    // console.log(setSaman);
-    const url = 'https://dummyjson.com/products?limit=100';
+  const url = "https://dummyjson.com/products?limit=100";
 
-    async function shopNow(){
-        const data= await fetch(url);
-        const json = await data.json();
-        setSaman(json.products);
-    }
-    
-    
-    // console.log(json)
-        useEffect(()=>{
-            shopNow();
-        },[]);
-    // console.log("dvsd");
+  async function shopNow() {
+    const data = await fetch(url);
+    const json = await data.json();
+    setSaman(json.products);
+  }
 
+  useEffect(() => {
+    shopNow();
+  }, []);
 
-
-    return saman;
-}
+  return saman;
+};
 export default useShop;

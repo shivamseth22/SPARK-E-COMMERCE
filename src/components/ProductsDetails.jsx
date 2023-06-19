@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 // import StarIcon from "@mui/icons-material/Star";
-import Shimmer from "../Shimmer";
+import Shimmer from "./Shimmer";
 import { addItem } from "../utils/cartSlice";
 import { useDispatch } from "react-redux";
 import Rating from "@mui/material/Rating";

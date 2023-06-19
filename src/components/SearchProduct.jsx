@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Rating } from "@mui/material";
+import Shimmer from "./Shimmer";
 const SearchProduct = () => {
   const [filterData, setFilterData] = useState(null);
 
@@ -17,11 +18,11 @@ const SearchProduct = () => {
     getSearchdata();
   }, [id]);
 
-  return (
+  return (!filterData)? <Shimmer/> :(
     <div className="">
       {filterData &&
         filterData.map((all) => (
-          <div className="flex gap-10 box-border m-10 p-5 ">
+          <div key={all.id} className="flex gap-10 box-border m-10 p-5 ">
             <div className="h-72">
               <img src={all.thumbnail} className="max-h-full shadow-2xl" />
             </div>
