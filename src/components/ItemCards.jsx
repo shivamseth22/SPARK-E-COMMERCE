@@ -13,8 +13,8 @@ const ItemCards = ({ category }) => {
             <Link
               to={`/product/${slip.id}`}
               key={slip.id}
-              className="place-items-center w-1/6"
-            >
+              className="place-items-center w-1/6">
+            
               <div className="flex h-1/2 justify-center ">
                 <img src={slip.thumbnail} className="h-full" />
               </div>
