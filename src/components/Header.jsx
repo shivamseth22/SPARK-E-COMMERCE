@@ -1,6 +1,6 @@
 import { useState} from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import {BiSearch} from "react-icons/Bi";
+import {BiSearch} from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { MdShop } from "react-icons/md";
