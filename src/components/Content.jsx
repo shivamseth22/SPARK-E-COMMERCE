@@ -13,7 +13,7 @@ const list = [
 ];
 const Content = () => {
   return (
-    <div className="flex flex-col justify-between gap-10 bg-red-300 min-w-[1490px] ">
+    <div className="flex flex-col justify-between gap-10 min-w-[1490px]  ">
       {list.map((item, index) => (
         <ItemCards category={item} key={index} />
       ))}

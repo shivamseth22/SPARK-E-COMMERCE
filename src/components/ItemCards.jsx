@@ -7,7 +7,7 @@ import PinkyData from "./PinkyData";
 const ItemCards = ({ category }) => {
   return (
     <>
-      <div className="flex w-full justify-around items-center overflow-scroll">
+      <div className="flex w-full justify-around items-center ">
         <div className="flex flex-col  w-[16%] justify-center  shadow-md  ">
           <div className="w-full flex flex-col items-center">
           <h1 className="text-3xl pt-5">Best Of</h1>

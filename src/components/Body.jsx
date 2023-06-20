@@ -8,7 +8,7 @@ import React from "react";
 
 const Body =()=>{
     return (
-        <div className="overflow-x-scroll">
+        <div className="overflow-auto">
             <Cateogry/>
             <Carous/>
             <Content/>
