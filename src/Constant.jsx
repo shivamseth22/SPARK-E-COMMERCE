@@ -2,3 +2,4 @@ export const Emptymg= "https://img.freepik.com/free-vector/empty-concept-illustr
 
 export const GroceryIcon = "https://assets8.lottiefiles.com/packages/lf20_y2v4toul.json";
 
+export const rzp_Id = "rzp_test_bjQst5tQbEznWE"
