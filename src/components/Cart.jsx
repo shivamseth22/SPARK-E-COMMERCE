@@ -9,14 +9,14 @@ const Cart = () => {
   return !cartItems.length ? (
     <EmptyCart/>
   ) : (
-    <div className=" flex">
-      <div className="flex  flex-col ">
+    <div className=" flex justify-between flex-wrap">
+      <div className="flex  flex-col">
         {cartItems.map((item) => (
           <BuyItem {...item} key={item.id} />
         ))} 
       </div>
 
-      <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center m-5 p-10 sticky top-32 shadow-2xl float-right">
+      <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center m-5 p-10 sticky top-32 shadow-2xl float-right min-w-[350px] max-w-[350px]">
           <h2 className="font-bold text-2xl">SUBTOTAL</h2>
         <div className="flex flex-col gap-8">
         <div className="flex gap-40">

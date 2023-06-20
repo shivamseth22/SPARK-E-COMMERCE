@@ -24,9 +24,9 @@ const Cateogry = () => {
         <h3>Grocery</h3>
       </Link>
       <Link to="/category/smartphones" className="p-3 w-[13%]   flex flex-col items-center">
-        <img src="https://img.freepik.com/free-vector/speech-text-concept-illustration_114360-4162.jpg?w=740&t=st=1687256172~exp=1687256772~hmac=9f107a6e3d9635ca171f0d5fb36240abeb18468a2d85f2ecaf609f0ed85c5bb4" />
+        <img src="https://img.freepik.com/free-vector/female-hand-holding-several-smartphones-different-colors-white-background-vector-illustration_1284-81272.jpg?size=626&ext=jpg&ga=GA1.1.590480319.1674674855&semt=sph" />
 
-        <h3>Mobile</h3>
+        <h3>Smartphones</h3>
       </Link>
 
       <Link to="/category/mens-shirts" className="p-3 w-[13%]  flex flex-col items-center">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import StarIcon from "@mui/icons-material/Star";
+
 import Shimmer from "./Shimmer";
 import { addItem } from "../utils/cartSlice";
 import { useDispatch } from "react-redux";
@@ -9,13 +9,11 @@ import SellIcon from "@mui/icons-material/Sell";
 import TextField from "@mui/material/TextField";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Box from "@mui/material/Box";
-import { FaRupeeSign } from "react-icons/fa";
+
 const ProductsDetails = () => {
   const { pid } = useParams();
 
   const [thing, setThing] = useState({});
-
-  // console.log(thing);
   const dispatch = useDispatch();
   const handleAddItem = (item) => {
     dispatch(addItem(item));

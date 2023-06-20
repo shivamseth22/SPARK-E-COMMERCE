@@ -47,6 +47,10 @@ export const appRouter = createBrowserRouter([
         path: "/search/:id",
         element: <SearchProduct />,
       },
+      {
+        path: "/products/:shopid",
+        element: <ProductsDetails/>,
+      },
       
       {
         path: "/category/:dataId",

@@ -6,7 +6,7 @@ const DataCategory = () => {
   const { dataId } = useParams();
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap m-5">
       <PinkyData cat={dataId} />
     </div>
   );
