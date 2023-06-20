@@ -6,12 +6,14 @@ import React from "react";
 
 
 
+
 const Body =()=>{
     return (
         <div >
             <Cateogry/>
 
             <Carous/>
+
             <div className="overflow-auto"><Content/></div>
             
         </div>
