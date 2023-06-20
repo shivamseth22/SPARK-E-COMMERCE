@@ -8,7 +8,7 @@ const Carous = () =>  {
     return (
         <>
 
-            <div className="">
+            <div className="mt-5">
 
                     <Carousel autoPlay={true} infiniteLoop={true} interval='30000' emulateTouch={true}>
                         <div className="">
