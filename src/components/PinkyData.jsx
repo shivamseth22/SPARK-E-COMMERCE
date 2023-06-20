@@ -11,7 +11,7 @@ const PinkyData = ({cat}) => {
             <Link
               to={`/product/${slip.id}`}
               key={slip.id}
-              className="place-items-center hover:scale-105 duration-300 border-2 h-72 w-[20%] m-2 shadow-lg p-2 "
+              className="place-items-center hover:scale-105 duration-300 border-2 h-72 w-[20%] m-2 shadow-lg p-2 sm:h-60 sm:w-[15%] sm:text-sm  xsm:h-60 xsm:w-[15%] xsm:text-sm "
             >
               <div className="flex h-1/2 justify-center ">
                 <img src={slip.thumbnail} className="h-full" />
