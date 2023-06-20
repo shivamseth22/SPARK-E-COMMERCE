@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { MdShop } from "react-icons/md";
 import Badge from "@mui/material/Badge";
 
-
+import {GiHamburgerMenu} from "react-icons/gi";
 import React from "react";
 
 const Header = () => {
@@ -20,17 +20,20 @@ const Header = () => {
   // console.log(cartItems);
 
   return (
-    <div className="flex text-center justify-around h-20 items-center  bg-blue-500 text-white sticky top-0 shadow-xl z-10 lg:bg-slate-800  md:bg-slate-600 sm:bg-red-400 none ">
+    <div className="flex text-center justify-around h-20 items-center  bg-slate-800 text-white sticky top-0 shadow-xl z-10  sm:flex sm:px-10 overflow-hidden">
       <h2 className="items-center font-bold flex gap-7 text-2xl">
-        <Link to="/">SPARK</Link>
-        <Link to="/Shop">
+       <div>
+       <GiHamburgerMenu/>
+       </div>
+        <Link to="/" className="xsm:hidden">SPARK</Link>
+        <Link to="/Shop" className="sm:hidden xsm:hidden">
           <MdShop className="" />
         </Link>
       </h2>
 
-      <div className="flex items-center md:bg-slate-600">
+      <div className="flex items-center ">
         <input
-          className="h-10 p-3  text-black border-none  lg:w-80 "
+          className="h-10 text-black border-none w-96 md:w-60 sm:w-52 xsm:w-40  "
           type="text"
           placeholder="Search for product,brands and more"
           value={searchText}
@@ -43,7 +46,7 @@ const Header = () => {
         <BiSearch onClick={() => navigate(`/search/${searchText}`)} className=" bg-white text-slate-800 h-10 w-10 p-2 cursor-pointer"/>
         </span>
       </div>
-      <ul className="flex text-center justify-between font-bold gap-5 text-lg">
+      <ul className="flex text-center justify-between font-bold gap-5 text-lg sm:hidden xsm:hidden">
         <li
           className="flex items-center justify-center bg-white text-slate-800 h-10 w-24 cursor-pointer font-bold"
           onClick={() => {
@@ -59,8 +62,8 @@ const Header = () => {
           {isLoggedIn}
         </li>
 
-        <li className="flex items-center ">Become a Seller</li>
-        <li className="flex items-center ">More</li>
+        <li className="flex items-center md:hidden ">Become a Seller</li>
+        <li className="flex items-center md:hidden ">More</li>
         <Link to="/Cart" className=" flex items-center">
           <Badge badgeContent={cartItems.length} color="secondary">
             <FaShoppingCart className="" />

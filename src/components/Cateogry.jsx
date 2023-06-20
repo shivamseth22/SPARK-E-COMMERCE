@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { GroceryIcon } from "../Constant";
 
+
 // const Section =()=>{
 //   return(
 //     <>
@@ -15,7 +16,7 @@ import { GroceryIcon } from "../Constant";
 
 const Cateogry = () => {
   return (
-    <div className=" w-full flex  items-center font-bold text-slate-800  justify-evenly">
+    <div className=" w-full flex  items-center font-bold text-slate-800  justify-evenly sm:text-sm xsm:text-xs">
   
       <Link to="/category/Groceries" className="p-3 w-[13%] flex flex-col items-center ">
         <img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" />
@@ -55,7 +56,7 @@ const Cateogry = () => {
       <Link to="/category/automotive" className="p-3 w-[13%]   flex flex-col items-center">
         <img src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" />
 
-        <h3>Beauty,Toy&More</h3>
+        <h3>More</h3>
       </Link>
     </div>
   );

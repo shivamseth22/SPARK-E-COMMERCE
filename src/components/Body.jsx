@@ -8,11 +8,11 @@ import React from "react";
 
 const Body =()=>{
     return (
-        <>
+        <div className="overflow-x-scroll">
             <Cateogry/>
             <Carous/>
             <Content/>
-        </>
+        </div>
     )
 }
 export default Body;

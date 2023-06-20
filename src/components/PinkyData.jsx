@@ -5,7 +5,7 @@ import { Rating } from "@mui/material";
 const PinkyData = ({cat}) => {
     const pinkyData = useCatproduct({cat});
   return (
-    <div className='flex justify-between  '>
+    <div className='flex  '>
         {pinkyData &&
           pinkyData?.map((slip) => (
             <Link
