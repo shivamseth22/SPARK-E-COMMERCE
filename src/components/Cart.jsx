@@ -1,42 +1,123 @@
 import { useSelector } from "react-redux";
 import BuyItem from "./BuyItem";
 import React from "react";
-import EmptyCart from "./EmptyCart";
+import EmptyCart from "./EmptyCart"
+import { useEffect } from "react";
+import {rzp_Id} from "../Constant";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const handlePaymentSuccess = (payment) => {
+  // console.log("Payment Successful:", payment);
+  // Perform necessary actions after successful payment        
+};
+
+const handlePaymentError = (error) => {
+  console.log("Payment Error:", error);
+  // Handle payment errors
+};
+
+const makePayment = async (price) => {
+  // if (!selectedAddress) {
+  //     notifyWarn('Choose an Address')
+  //     return;
+  // }
+  const options = {
+      key: rzp_Id,
+      amount: price * 100,
+      currency: "INR",
+      name: "AnixCart",
+      description: "Thank you for your test purchase",
+      image: '',
+      handler: handlePaymentSuccess,
+      prefill: {
+          name:'',
+          email: '',
+          contact: ''
+      },
+      notes: {
+          address: ''
+      },
+      theme: {
+          color: "#0e5db3"
+      }
+  };
+  // window.RazorpayCheckout.open(options);
+  const razorpayInstance = new window.Razorpay(options);
+  razorpayInstance.on('payment.failed', handlePaymentError);
+  razorpayInstance.open();
+};
 
 const Cart = () => {
+  const price= 1000;
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+  
+
+
+
+
+useEffect(() => {
+  const script = document.createElement("script");
+  script.src = "https://checkout.razorpay.com/v1/checkout.js";
+  script.async = true;
+  document.body.appendChild(script);
+
+  return () => {
+      document.body.removeChild(script);
+  };
+}, []);
+
+
+
+
+
+
+
   return !cartItems.length ? (
-    <EmptyCart/>
+    <EmptyCart />
   ) : (
+
     <div className=" flex justify-between flex-wrap">
       <div className="flex  flex-col">
         {cartItems.map((item) => (
           <BuyItem {...item} key={item.id} />
-        ))} 
+        ))}
       </div>
 
-      <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center m-5 p-10 sticky top-32 shadow-2xl float-right min-w-[350px] max-w-[350px]">
-          <h2 className="font-bold text-2xl">SUBTOTAL</h2>
+      <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center m-5 p-10  right-0 shadow-2xl float-right min-w-[350px] max-w-[350px]">
+        <h2 className="font-bold text-2xl">SUBTOTAL</h2>
         <div className="flex flex-col gap-8">
-        <div className="flex gap-40">
-          <h2>price</h2>
-          <h2>xxx</h2>
-        </div>
+          <div className="flex gap-40">
+            <h2>price</h2>
+            <h2>xxx</h2>
+          </div>
 
-        <div className="flex gap-40">
-          <h2>Discount</h2>
-          <h2>xxxx</h2>
-        </div>
+          <div className="flex gap-40">
+            <h2>Discount</h2>
+            <h2>xxxx</h2>
+          </div>
 
-        <div className="flex gap-40 font-bold ">
-          <h2>Total</h2>
-          <h2>xxxx</h2>
-        </div>
-        <button className="bg-yellow-400 p-4">Proceed To Pay</button>
+          <div className="flex gap-40 font-bold ">
+            <h2>Total</h2>
+            <h2>xxxx</h2>
+          </div>
+          <button className="bg-yellow-400 p-4" onClick={() => makePayment(price)}>Proceed To Pay</button>
         </div>
       </div>
-      
     </div>
   );
 };

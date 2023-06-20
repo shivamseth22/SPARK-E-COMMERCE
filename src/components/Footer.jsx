@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <div className="flex justify-evenly  gap-5 p-4 shadow-2xl bg-slate-800 text-white  flex-wrap mt-10 sm:text-xs">
       <div className="min-w-[250px]" >
-        <h3 className="pb-1 text-xl font-bold">About</h3>
+        <h3 className="pb-1 text-xl font-bold items-center ">About</h3>
         <ul>
           <li>Contact us</li>
           <li>About us</li>

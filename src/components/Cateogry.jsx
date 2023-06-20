@@ -18,42 +18,42 @@ const Cateogry = () => {
   return (
     <div className=" w-full flex  items-center font-bold text-slate-800  justify-evenly sm:text-sm xsm:text-xs">
   
-      <Link to="/category/Groceries" className="p-3 w-[13%] flex flex-col items-center ">
+      <Link to="/category/Groceries" className="p-3 w-[13%] flex flex-col items-center hover:scale-110 duration-300 ">
         <img src="https://img.freepik.com/free-vector/shopping-basket-with-food-vector-illustration-cart-with-product-buy-supermarket-vector-illustration_1284-47048.jpg?w=740&t=st=1687256098~exp=1687256698~hmac=c0451d6b0d13c1445399a98197147ff41176477d1f0738e66dc640c417f7bfee" />
 
         <h3>Grocery</h3>
       </Link>
-      <Link to="/category/smartphones" className="p-3 w-[13%]   flex flex-col items-center">
+      <Link to="/category/smartphones" className="p-3 w-[13%]   flex flex-col items-center hover:scale-110 duration-300">
         <img src="https://img.freepik.com/free-vector/female-hand-holding-several-smartphones-different-colors-white-background-vector-illustration_1284-81272.jpg?size=626&ext=jpg&ga=GA1.1.590480319.1674674855&semt=sph" />
 
         <h3>Smartphones</h3>
       </Link>
 
-      <Link to="/category/mens-shirts" className="p-3 w-[13%]  flex flex-col items-center">
+      <Link to="/category/mens-shirts" className="p-3 w-[13%]  flex flex-col items-center hover:scale-110 duration-300">
         <img src="https://img.freepik.com/free-vector/customer-woman-shopping-with-barrow-concept_40876-2550.jpg?size=626&ext=jpg&ga=GA1.1.590480319.1674674855&semt=sph"  />
 
         <h3>Faishon</h3>
       </Link>
 
-      <Link to="/category/laptops" className="p-3 w-[13%]  flex flex-col items-center">
+      <Link to="/category/laptops" className="p-3 w-[13%]  flex flex-col items-center hover:scale-110 duration-300">
         <img src="https://img.freepik.com/free-vector/antigravity-technology-with-elements_23-2148127714.jpg?size=626&ext=jpg&ga=GA1.1.590480319.1674674855&semt=ais" />
 
         <h3>Electronics</h3>
       </Link>
 
-      <Link to="/category/lighting" className="p-3 w-[13%]   flex flex-col items-center">
+      <Link to="/category/lighting" className="p-3 w-[13%]   flex flex-col items-center hover:scale-110 duration-300">
         {" "}
         <img src="https://img.freepik.com/free-vector/vector-dining-room-interior-with-round-brown-wooden-table-two-chairs-red-book-cups-coffee-tea-lamp-plant-pot-photo-frames-wall-isolated-white-background_1284-48474.jpg?size=626&ext=jpg&ga=GA1.1.590480319.1674674855&semt=sph" />
         <h3>Home</h3>
       </Link>
 
-      {/* <Link to="/category/Appliance" className="p-3 w-[13%]   flex flex-col items-center">
+      {/* <Link to="/category/Appliance" className="p-3 w-[13%]   flex flex-col items-center hover:scale-110 duration-300">
         <img src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" />
 
         <h3>Appliance</h3>
       </Link> */}
 
-      <Link to="/category/automotive" className="p-3 w-[13%]   flex flex-col items-center">
+      <Link to="/category/automotive" className="p-3 w-[13%]   flex flex-col items-center hover:scale-110 duration-300">
         <img src="https://img.freepik.com/free-vector/worker-with-sign_1012-206.jpg?w=740&t=st=1687256805~exp=1687257405~hmac=bceaabed6c698fdf99315b22523993113ce7afd7c0b765ed6f4e25c1f478a3bb" />
 
         <h3>More</h3>

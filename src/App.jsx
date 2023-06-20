@@ -18,7 +18,7 @@ import Shop from "./components/Shop";
 import DataCategory from "./components/DataCategory";
 function App() {
   return (
-    <div className="app w-full">
+    <div className="">
       <Provider store={store}>
         <Header />
         <Outlet />

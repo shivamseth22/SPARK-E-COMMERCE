@@ -8,6 +8,9 @@ import Badge from "@mui/material/Badge";
 
 import {GiHamburgerMenu} from "react-icons/gi";
 import React from "react";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  
 
 const Header = () => {
   const [searchText, setSearchText] = useState(" ");
@@ -46,9 +49,9 @@ const Header = () => {
         <BiSearch onClick={() => navigate(`/search/${searchText}`)} className=" bg-white text-slate-800 h-10 w-10 p-2 cursor-pointer"/>
         </span>
       </div>
-      <ul className="flex text-center justify-between font-bold gap-5 text-lg sm:hidden xsm:hidden">
+      <ul className="flex text-center justify-between font-bold gap-5 text-lg ">
         <li
-          className="flex items-center justify-center bg-white text-slate-800 h-10 w-24 cursor-pointer font-bold"
+          className="flex items-center justify-center bg-white text-slate-800 h-10 w-24 cursor-pointer font-bold sm:hidden xsm:hidden"
           onClick={() => {
             if (isLoggedIn === "Login") {
               setIsLoggedIn("Logout");
@@ -58,12 +61,13 @@ const Header = () => {
               navigate("/");
             }
           }}
+
         >
           {isLoggedIn}
         </li>
 
-        <li className="flex items-center md:hidden ">Become a Seller</li>
-        <li className="flex items-center md:hidden ">More</li>
+        <li className="flex items-center md:hidden sm:hidden xsm:hidden">Become a Seller</li>
+        <li className="flex items-center md:hidden sm:hidden xsm:hidden">More</li>
         <Link to="/Cart" className=" flex items-center">
           <Badge badgeContent={cartItems.length} color="secondary">
             <FaShoppingCart className="" />
