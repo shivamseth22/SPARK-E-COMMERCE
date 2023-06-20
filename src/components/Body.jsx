@@ -8,10 +8,12 @@ import React from "react";
 
 const Body =()=>{
     return (
-        <div className="overflow-auto">
+        <div >
             <Cateogry/>
+
             <Carous/>
-            <Content/>
+            <div className="overflow-auto"><Content/></div>
+            
         </div>
     )
 }

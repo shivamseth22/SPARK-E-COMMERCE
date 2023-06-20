@@ -24,7 +24,7 @@ const ItemCards = ({ category }) => {
           />
           </div>
         </div>
-       <div className="w-[80%]">
+       <div className="w-[80%] overflow-auto">
         <PinkyData cat={category}  />
        </div>
         
