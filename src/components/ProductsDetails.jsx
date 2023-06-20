@@ -29,14 +29,12 @@ const ProductsDetails = () => {
     const data = await fetch(`https://dummyjson.com/products/${pid}`);
     const json = await data.json();
     setThing(json);
-    
   }
-
 
   return !thing ? (
     <Shimmer />
   ) : (
-    <div className="flex box-border m-10 p-5 ">
+    <div className="flex box-border m-10 p-5 sm:flex sm:flex-col sm:items-center sm:text-sm xsm:flex xsm:flex-col xsm:items-center xsm:text-xs ">
       <div className=" ">
         <div className="h-90 w-90 m-10 ">
           <img src={thing.thumbnail} className="shadow-2xl" />
@@ -61,18 +59,18 @@ const ProductsDetails = () => {
           }
         </div>
       </div>
-      <div className="flex flex-col justify-between p-5 gap-2 mt-5">
+      <div className="flex flex-col justify-between p-5 gap-2 mt-5 ">
         <h1 className="uppercase text-gray-500">{thing.category}</h1>
-        <h1 className="font-bold text-2xl">{thing.title}</h1>
-        
+        <h1 className="font-bold text-2xl sm:text-lg xsm:text-sm">
+          {thing.title}
+        </h1>
 
-        <h1 className="text-5xl font-bold ">
-        <span className="i-discount">&#8377;{thing.price * 40}</span>{" "}
-              
+        <h1 className="text-5xl font-bold sm:text-2xl xsm:text-2xl">
+          <span className="i-discount">&#8377;{thing.price * 40}</span>{" "}
           <span className="line-through text-2xl text-gray-500">
-          &#8377;{thing.price * 70}
+            &#8377;{thing.price * 70}
           </span>{" "}
-          <span className="text-3xl text-green-600">
+          <span className="text-3xl text-green-600 sm:text-xl xsm:text-sm ">
             {thing.discountPercentage} % Off
           </span>{" "}
         </h1>
