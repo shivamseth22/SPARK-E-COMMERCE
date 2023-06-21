@@ -4,7 +4,7 @@ import React from "react";
 import EmptyCart from "./EmptyCart";
 import { useEffect } from "react";
 import { rzp_Id } from "../Constant";
-import  {clearCart}  from "../utils/cartSlice";
+import { clearCart } from "../utils/cartSlice";
 
 const handlePaymentSuccess = (payment) => {
   // console.log("Payment Successful:", payment);
@@ -71,13 +71,17 @@ const Cart = () => {
   return !cartItems.length ? (
     <EmptyCart />
   ) : (
+<>
+    <div className="flex m-3 gap-10 pl-12 items-center">
+    <h1>Your Cart</h1>
+    <button className="bg-yellow-300 p-2"  onClick={() => handleClearCart()}>Clear cart</button>
+    </div>
     <div className=" flex justify-between flex-wrap xsm:flex xsm:justify-center sm:flex sm:justify-center md:flex md:justify-center lg:flex lg:justify-center ">
-                <div className="max-w-4xl">
+      <div className="max-w-4xl">
         {cartItems.map((item) => (
           <BuyItem {...item} key={item.id} />
         ))}
       </div>
-      <button className="hidden"  onClick={() => handleClearCart()}>Clear cart</button>
 
       <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center my-10 mr-5 p-10  right-0 shadow-2xl  bg-slate-200 float-right min-w-[350px] max-w-[350px] sm: ">
         <h2 className="font-bold text-2xl">SUBTOTAL</h2>
@@ -105,6 +109,7 @@ const Cart = () => {
         </div>
       </div>
     </div>
-  );
+    </>);
 };
+
 export default Cart;
