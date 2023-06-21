@@ -83,7 +83,7 @@ const Cart = () => {
         ))}
       </div>
 
-      <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center my-10 mr-5 p-10  right-0 shadow-2xl  bg-slate-200 float-right min-w-[350px] max-w-[350px] sm: ">
+      <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center my-10 mx-5 p-10  right-0 shadow-2xl  bg-slate-200 float-right min-w-[350px] max-w-[350px] sm: ">
         <h2 className="font-bold text-2xl">SUBTOTAL</h2>
         <div className="flex flex-col gap-8">
           <div className="flex gap-40">
