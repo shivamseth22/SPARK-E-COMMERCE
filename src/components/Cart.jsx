@@ -76,14 +76,14 @@ const Cart = () => {
     <h1>Your Cart</h1>
     <button className="bg-yellow-300 p-2"  onClick={() => handleClearCart()}>Clear cart</button>
     </div>
-    <div className=" flex justify-between flex-wrap xsm:flex xsm:justify-center sm:flex sm:justify-center md:flex md:justify-center lg:flex lg:justify-center ">
+    <div className=" flex justify-between flex-wrap xsm:flex xsm:justify-center sm:flex sm:justify-center md:flex md:justify-center  ">
       <div className="max-w-4xl">
         {cartItems.map((item) => (
           <BuyItem {...item} key={item.id} />
         ))}
       </div>
 
-      <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center my-10 mx-5 p-10  right-0 shadow-2xl  bg-slate-200 float-right min-w-[350px] max-w-[350px] sm: ">
+      <div className="flex flex-col gap-10 w-1/3 h-1/3 items-center my-10 mx-5 p-10  right-0 shadow-2xl  bg-slate-200 float-right min-w-[350px] max-w-[350px]">
         <h2 className="font-bold text-2xl">SUBTOTAL</h2>
         <div className="flex flex-col gap-8">
           <div className="flex gap-40">

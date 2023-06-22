@@ -1,5 +1,6 @@
 import ItemCards from "./ItemCards";
 import React from "react";
+
 const list = [
   "smartphones",
   "sunglasses",
@@ -8,14 +9,20 @@ const list = [
   "home-decoration",
   "mens-shirts",
   "laptops",
-  "lighting"
-
+  "lighting",
 ];
+
 const Content = () => {
+
+
+ 
   return (
-    <div className="flex flex-col justify-between gap-10 min-w-[1490px]">
+    <div className="flex flex-col justify-between gap-10 w-full">
       {list.map((item, index) => (
+       <>
+       
         <ItemCards category={item} key={index} />
+       </>
       ))}
     </div>
   );

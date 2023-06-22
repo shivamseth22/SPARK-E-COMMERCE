@@ -29,7 +29,7 @@ const ProductsDetails = () => {
     setThing(json);
   }
 
-  return !thing ? (
+  return !thing?(
     <Shimmer />
   ) : (
     <div className="flex box-border m-10 p-5 sm:flex sm:flex-col sm:items-center sm:text-sm xsm:flex xsm:flex-col xsm:items-center xsm:text-xs ">

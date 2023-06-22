@@ -7,7 +7,7 @@ const DataCategory = () => {
 
   return (
     <div className="">
-      <PinkyData cat={dataId} />
+      <PinkyData category={dataId} className="" />
     </div>
   );
 };

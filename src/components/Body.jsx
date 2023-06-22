@@ -5,7 +5,7 @@ import React from "react";
 
 const Body = () => {
   return (
-    <div>
+    <div className="w-full">
       <Cateogry />
 
       <Carous />
